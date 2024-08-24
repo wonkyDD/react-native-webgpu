@@ -1,12 +1,16 @@
-import { StyleSheet } from "react-native";
-import { View } from "react-native-reanimated/lib/typescript/Animated";
+import { StyleSheet, View } from "react-native";
 import { Canvas } from "react-native-wgpu";
 
 import { useWebGPU } from "../components/useWebGPU";
 
 export function ImageBlur() {
   const { canvasRef } = useWebGPU(async ({ context, device, canvas }) => {
-    function frame() {}
+    function frame() {
+      const swapChainTexture = context.getCurrentTexture();
+      const commandEncoder = device.createCommandEncoder();
+      device.queue.submit([commandEncoder.finish()]);
+    }
+
     return frame;
   });
 
