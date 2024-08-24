@@ -91,6 +91,10 @@ export const examples = [
     screen: "Resize",
     title: "↔️ Resize",
   },
+  {
+    screen: "ImageBlur",
+    title: "🔍 Image Blur",
+  },
 ] as const;
 
 const styles = StyleSheet.create({

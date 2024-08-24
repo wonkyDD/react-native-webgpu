@@ -19,5 +19,6 @@ export type Routes = {
   ReversedZ: undefined;
   Wireframe: undefined;
   Resize: undefined;
+  ImageBlur: undefined;
   Tests: undefined;
 };

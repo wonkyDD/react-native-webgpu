@@ -26,6 +26,7 @@ import { DeferedRendering, ShadowMapping } from "./ShadowMapping";
 import { SamplerParameters } from "./Sampler";
 import { ReversedZ } from "./ReversedZ";
 import { ThreeJS } from "./ThreeJS";
+import { ImageBlur } from "./ImageBlur";
 
 const Stack = createNativeStackNavigator<Routes>();
 
@@ -66,6 +67,7 @@ function App() {
           <Stack.Screen name="Wireframe" component={Wireframe} />
           <Stack.Screen name="Particles" component={Particules} />
           <Stack.Screen name="Resize" component={Resize} />
+          <Stack.Screen name="ImageBlur" component={ImageBlur} />
           <Stack.Screen name="Tests">
             {(props) => <Tests {...props} assets={assets} />}
           </Stack.Screen>
